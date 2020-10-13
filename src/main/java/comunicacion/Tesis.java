@@ -10,12 +10,12 @@ public class Tesis extends Escrito {
 		super(origen,titulo,autor,paginas);
 	}
 	@Override
-	int palabrasTotales(int palabrasPagina) {
+	public int palabrasTotales(int palabrasPagina) {
 		return this.getPaginas()*5;
 	}
 
 	@Override
-	String interpretacion() {
+	public String interpretacion() {
 		return this.interpretacion;
 	}
 
@@ -30,6 +30,18 @@ public class Tesis extends Escrito {
 		r += this.conclusion + "\n";
 		r += this.referencias;
 		return  r;
+	}
+	public String getIdea() {
+		return this.idea;
+	}
+	public String[] getArgumentos() {
+		return this.argumentos;
+	}
+	public String getConclusion() {
+		return this.conclusion;
+	}
+	public String getReferencias() {
+		return this.referencias;
 	}
 
 }

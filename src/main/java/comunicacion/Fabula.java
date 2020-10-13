@@ -3,16 +3,18 @@ package comunicacion;
 public class Fabula extends Escrito {
 	private String ensenanza;
 	private String interpretacion;
-	public Fabula(String origen, String titulo, String autor, int paginas) {
+	public Fabula(String origen, String titulo, String autor, int paginas,String ens,String inter) {
 		super(origen, titulo, autor, paginas);
+		this.ensenanza=ens;
+		this.interpretacion=inter;
 	}
 	@Override
-	int palabrasTotales(int palabrasPagina) {
+	public int palabrasTotales(int palabrasPagina) {
 		return this.getPaginas();
 	}
 
 	@Override
-	String interpretacion() {
+	public String interpretacion() {
 		return this.interpretacion;
 	}
 
@@ -24,6 +26,9 @@ public class Fabula extends Escrito {
 		r += this.getPaginas() + "\n";
 		r += this.ensenanza;
 		return  r;
+	}
+	public String getEnsenanza() {
+		return this.ensenanza;
 	}
 
 }

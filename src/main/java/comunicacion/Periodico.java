@@ -4,16 +4,19 @@ public class Periodico extends Escrito {
 	private String fecha;
 	private String primicia;
 	private String interpretacion;
-	public Periodico(String origen,String titulo,String autor,int paginas) {
+	public Periodico(String origen,String titulo,String autor,int paginas,String fecha,String primicia,String inter) {
 		super(origen,titulo,autor,paginas);
+		this.fecha=fecha;
+		this.primicia=primicia;
+		this.interpretacion=inter;
 	}
 	@Override
-	int palabrasTotales(int palabrasPagina) {
+	public int palabrasTotales(int palabrasPagina) {
 		return this.getPaginas()*10;
 	}
 
 	@Override
-	String interpretacion() {
+	public String interpretacion() {
 		return this.interpretacion;
 	}
 
@@ -26,6 +29,12 @@ public class Periodico extends Escrito {
 		r += this.fecha + "\n";
 		r += this.primicia;
 		return  r;
+	}
+	public String getFecha() {
+		return this.fecha;
+	}
+	public String getPrimicia() {
+		return this.primicia;
 	}
 
 }

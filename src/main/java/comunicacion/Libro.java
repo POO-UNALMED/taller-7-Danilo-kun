@@ -13,11 +13,11 @@ public class Libro extends Escrito {
 		this.interpretacion=inter;
 	}
 	@Override
-	int palabrasTotales(int palabrasPagina) {
+	public int palabrasTotales(int palabrasPagina) {
 		return this.getPaginas()*2;
 	}
 	@Override
-	String interpretacion() {
+	public String interpretacion() {
 		return this.interpretacion;
 	}
 	@Override
@@ -31,5 +31,13 @@ public class Libro extends Escrito {
 		r += this.edicion;
 		return  r;
 	}
-
+	public String getCo_autor() {
+		return this.co_autor;
+	}
+	public String getEditorial() {
+		return this.editorial;
+	}
+	public String getEdicion() {
+		return this.edicion;
+	}
 }
