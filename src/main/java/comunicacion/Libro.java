@@ -13,8 +13,8 @@ public class Libro extends Escrito {
 		this.interpretacion=inter;
 	}
 	@Override
-	public int palabrasTotales(int palabrasPagina) {
-		return this.getPaginas()*2;
+	public int palabrasTotales(int i) {
+		return this.getPaginas()*i*2;
 	}
 	@Override
 	public String interpretacion() {

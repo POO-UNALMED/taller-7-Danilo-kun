@@ -11,8 +11,8 @@ public class Periodico extends Escrito {
 		this.interpretacion=inter;
 	}
 	@Override
-	public int palabrasTotales(int palabrasPagina) {
-		return this.getPaginas()*10;
+	public int palabrasTotales(int i) {
+		return this.getPaginas()*i*10;
 	}
 
 	@Override

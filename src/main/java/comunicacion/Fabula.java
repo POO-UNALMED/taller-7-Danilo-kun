@@ -9,8 +9,8 @@ public class Fabula extends Escrito {
 		this.interpretacion=inter;
 	}
 	@Override
-	public int palabrasTotales(int palabrasPagina) {
-		return this.getPaginas();
+	public int palabrasTotales(int i) {
+		return this.getPaginas()*i;
 	}
 
 	@Override
@@ -30,5 +30,4 @@ public class Fabula extends Escrito {
 	public String getEnsenanza() {
 		return this.ensenanza;
 	}
-
 }

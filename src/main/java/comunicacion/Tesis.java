@@ -15,8 +15,8 @@ public class Tesis extends Escrito {
 		this.interpretacion=inter;
 	}
 	@Override
-	public int palabrasTotales(int palabrasPagina) {
-		return this.getPaginas()*5;
+	public int palabrasTotales(int i) {
+		return this.getPaginas()*i*5;
 	}
 
 	@Override
